@@ -56,7 +56,7 @@ Swagger: http://localhost:8000/docs
 
 POST     /api/items            Создать новый элемент
   
-GET      /api/items?limit=20   Получить список элементов
+GET      /api/items            Получить список элементов
   
 PUT      /api/items/{id}       Обновить элемент
   
