@@ -1,6 +1,6 @@
 from sqlalchemy.future import select
 from sqlalchemy.ext.asyncio import AsyncSession
-from back.app.models.item import Item
+from app.models.item import Item
 from uuid import UUID
 from datetime import datetime
 
