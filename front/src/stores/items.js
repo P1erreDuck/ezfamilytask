@@ -1,5 +1,7 @@
 import { defineStore } from 'pinia'
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+
 export const useItemsStore = defineStore('items', {
   state: () => ({
     items: [],
@@ -13,7 +15,7 @@ export const useItemsStore = defineStore('items', {
       this.error = null
 
       try {
-        const res = await fetch('http://localhost:8000/api/items/', {
+        const res = await fetch(`${API_URL}/api/items/`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ text })
@@ -40,7 +42,7 @@ export const useItemsStore = defineStore('items', {
       this.error = null
 
       try {
-        const res = await fetch(`http://localhost:8000/api/items/${id}`, {
+        const res = await fetch(`${API_URL}/api/items/${id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ text: newText })
@@ -71,7 +73,7 @@ export const useItemsStore = defineStore('items', {
 
       try {
         const res = await fetch(
-          `http://localhost:8000/api/items/?limit=${limit}`
+          `${API_URL}/api/items/?limit=${limit}`
         )
 
         if (!res.ok) {
@@ -92,7 +94,7 @@ export const useItemsStore = defineStore('items', {
       this.error = null
 
       try {
-        const res = await fetch(`http://localhost:8000/api/items/${id}`, {
+        const res = await fetch(`${API_URL}/api/items/${id}`, {
           method: 'DELETE'
         })
 

@@ -2,7 +2,7 @@ from sqlalchemy import Column, String, DateTime
 from sqlalchemy.sql import func
 import uuid
 from sqlalchemy.dialects.postgresql import UUID
-from back.app.db.base import Base
+from app.db.base import Base
 
 class Item(Base):
     __tablename__ = "items"

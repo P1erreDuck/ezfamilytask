@@ -4,9 +4,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from typing import List
 from uuid import UUID
 
-from back.app.db.session import get_async_session
-from back.app.schemas.item import ItemCreate, ItemResponse, ItemUpdate
-from back.app.crud.item import create_item, get_items, delete_item, update_item
+from app.db.session import get_async_session
+from app.schemas.item import ItemCreate, ItemResponse, ItemUpdate
+from app.crud.item import create_item, get_items, delete_item, update_item
 
 router = APIRouter(prefix="/api/items", tags=["Элементы"])
 
