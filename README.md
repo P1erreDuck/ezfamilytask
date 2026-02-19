@@ -32,6 +32,7 @@ git clone https://github.com/P1erreDuck/ezfamilytask.git
     BACKEND_PORT=8000
     FRONTEND_PORT=5173
     VITE_API_URL=http://<IP_СЕРВЕРА>:8000
+    CORS_ORIGINS=http://localhost:5173,http://<IP_СЕРВЕРА>:5173  # Адреса фронтенда
 
 ------------------------------------------------------------------------
 
